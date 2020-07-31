@@ -1,0 +1,70 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(/img/luke-chesser-hQo6Uyo4nBg-unsplash.jpg);
+    width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: auto auto;
+    padding: 100px 100px;
+    width: auto;
+}
+
+
+
+/* Text Adjustments*/
+h1 {
+    font-size: 64px;
+    padding: 1rem 1rem;
+}
+
+
+a {
+    color: white;
+}
+
+/* main sections */
+
+header {
+    color: white;
+    text-align: center;
+    padding: 3rem 3rem;
+    grid-column: 1 / span 12;
+}
+
+.subtitle {
+    text-decoration: none;
+    border: white 2px solid;
+    opacity: 1;
+    padding: .5rem;
+    margin-bottom: 4rem;
+
+    animation-name: subtitle-fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+    animation-name: subtitle-color;
+    animation-duration: 5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes subtitle-fade {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes subtitle-color {
+    0% {color: white;}
+    15% {color: red;}
+    30% {color: orange;}
+    45% {color: yellow;}
+    60% {color: green;}
+    75% {color: blue;}
+    90% {color: indigo;}
+    100% {color: violet;}
+}
