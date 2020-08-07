@@ -1,70 +1,180 @@
-body {
-    font-family: 'Courier New', Courier, monospace;
-    background-image: url(/img/luke-chesser-hQo6Uyo4nBg-unsplash.jpg);
-    width: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
 }
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    margin: auto auto;
-    padding: 100px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
     width: auto;
 }
 
 
 
 /* Text Adjustments*/
-h1 {
-    font-size: 64px;
-    padding: 1rem 1rem;
-}
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 64px;
+    }
+
+    h3 {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 24px;
+    }
 
 
-a {
-    color: white;
-}
+    a {
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+    }
 
-/* main sections */
+/* Header */
 
-header {
-    color: white;
-    text-align: center;
-    padding: 3rem 3rem;
-    grid-column: 1 / span 12;
-}
+    header {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: 1vh;
+        color: white;
+        text-align: center;
+        padding: 3rem 3rem;
 
-.subtitle {
-    text-decoration: none;
-    border: white 2px solid;
-    opacity: 1;
-    padding: .5rem;
-    margin-bottom: 4rem;
+    }
 
-    animation-name: subtitle-fade;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
+    .title {
+        padding: 1rem 1rem;
+    }
 
-    animation-name: subtitle-color;
-    animation-duration: 5s;
-    animation-delay: 1.5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-}
+    .subtitle {
+        text-decoration: none;
+        border: white 2px solid;
+        opacity: 1;
+        align-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+        margin-bottom: 3rem;
 
-@keyframes subtitle-fade {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
-}
+        animation-name: subtitle-fade;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
 
-@keyframes subtitle-color {
-    0% {color: white;}
-    15% {color: red;}
-    30% {color: orange;}
-    45% {color: yellow;}
-    60% {color: green;}
-    75% {color: blue;}
-    90% {color: indigo;}
-    100% {color: violet;}
-}
+        animation-name: subtitle-color;
+        animation-duration: 5s;
+        animation-delay: 1.5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes subtitle-fade {
+        0% {opacity: 0%;}
+        100% {opacity: 100%;}
+    }
+
+    @keyframes subtitle-color {
+        0% {color: white;}
+        15% {color: red;}
+        30% {color: orange;}
+        45% {color: yellow;}
+        60% {color: green;}
+        75% {color: blue;}
+        90% {color: indigo;}
+        100% {color: violet;}
+    }
+
+    .author {
+        margin: 2vh 0 4vh 0;
+        flex: 1;
+    }
+
+    .nav-links {
+        margin-top: 2vh;
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    nav a{
+        font-weight: 700;
+        font-size: 24px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .nav-selected {
+        color: red;
+    }
+
+
+    .background-gradient {
+        z-index: -1;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+    }
+
+/* Tips Main */
+    main {
+        display: flex;
+        justify-content: center;
+        /* padding: 2vh; */
+    }
+
+    .tips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 80%;
+        align-items: flex-start;
+    }
+
+    .tip {
+        padding: 1vh;
+        width: 40%;
+        margin: 2vh;
+        color: white;
+    }
+
+/* Videos Main */
+
+    .main-videos {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        justify-content: space-evenly;
+    }
+    .video {
+        margin: 5px;
+        width: auto;
+    }
+
+
+/* Media Queries */
+    @media screen and (max-width: 540px) {
+        header {
+            width: 90%;
+        }
+        .nav-links {
+            flex-direction: column;
+        }
+        .nav-link {
+            line-height: 2;
+        }
+        .tips {
+            width: 100%;
+        }
+        main {
+            width: 100%;
+        }
+        .main-videos {
+            width: 90%;
+        }
+    }

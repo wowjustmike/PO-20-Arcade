@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
     <title>PO-20 Arcade</title>
 </head>
 <body>
 <!--beginning of wrapper-->    
     <div class="wrapper">
+        <!--Background Image-->
+        
     <header>
-        <h1>PO-20</h1>
-        <br>
-        <h1>Arcade</h1>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><h3>Tips</h3></li>
-                <li><h3>Videos</h3></li>
+        <h1 class="title">PO-20</h1>
+        <h1 class="subtitle">Arcade</h1>
+        <h3 class="author">by <a href="https://github.com/wowjustmike">wowjustmike</a></h3>
+        <nav class="navigation">
+            <ul class="nav-links">
+                <li><a class="nav-link" href="/index.html">Home</a></li>
+                <li><a class="nav-link" class="nav-selected" href="/tips.html">Tips</a></li>
+                <li><a class="nav-link" href="/videos.html">Videos</a></li>
             </ul>
         </nav>
     </header>
 
+    <main>
+        <div class="tips">
+            <li class="tip">Make a simple riff and then copy it to a new pattern and elaborate, adding some other sounds to make it more complex.</li>
+
+            <li class="tip">Alternatively, make several patterns that are similar and can be played one after the other, as the chords change.</li>
+
+            <li class="tip">I like to use a blank pattern to plan out chord progressions before I start adding sounds. This way, the chords are defined and it's easier to pick notes that go well with the chords.</li>    
+               
+            <li class="tip">You've probably noticed that some of the sounds change pitch with the chords and others stay the same regardless. I like to use some of both for variety.</li>
+            <li class="tip">Many of the sounds can become very subtle if you hold "write" and turn the right knob all the way down as its playing. I like using these subtle sounds to build quieter riffs.</li>
+                
+            <li class="tip">The PO-20 effects function differently than the other pocket operators. I find it's harder to get really weird sounds out of the 20, as compared to the 12 and 14. It is much easier, however, to make pleasant melodic tunes.</li>    
+                
+            <li class="tip">I tend to leave the drum sounds to the PO-12, but if you only have the 20, it has some basic drum abilities that can be made quite interesting using the parameter locking.</li>       
+                
+            <li class="tip">Holding a step button and hitting "bpm" adds a retrig effect to that step. Drum beats and melodies alike can be made quite cool using this feature.</li>    
+        </div>
+    </main>
     </div>
+
+    <img class="background-gradient" src="/img/luke-chesser-hQo6Uyo4nBg-unsplash.jpg" alt="">
 <!--end of wrapper-->>
 </body>
 </html>
