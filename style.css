@@ -44,30 +44,122 @@ a {
 
 /* Header */
 
-/* Title */
+
+
 header {
     display: flex;
     height: 100vh;
     margin: 0 10%;
     flex-direction: column;
     justify-content: center;
-    align-items: space-evenly;
-    /* background: yellowgreen; */
+    align-items: space-evenly;    
 }
 
-.title, .title1, .author {
+/* PO-20 Hero Image  */
+#hero1, #hero2 {
+    position: fixed;
+    height: 80vh;
     align-self: center;
-    text-align: center;
-    margin: 10px;
+    opacity: 1;
+}    
+
+#hero1 {
+    z-index: 3;
 }
+
+/* Hero Animations */
+#hero1 {
+    animation-name: fade-in, fade-out, move-back;
+    animation-duration: 0.5s, 1s, 1s;
+    animation-delay: 0s, 2s, 2s;
+    animation-fill-mode: forwards;
+}
+
+#hero2 {
+    animation-name: fade-in, h2-fade-back;
+    animation-duration: 0.5s, 2s;
+    animation-delay: 0s, 2.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out{
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes h2-fade-back {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.15;
+    }
+}
+
+@keyframes move-back {
+    from { z-index: 3;}
+    to {z-index: -1;}
+}
+
+    /* Title */    
 
 .title {
     border: 1px solid white;
     padding: 25px;
+    z-index: 2;
+    align-self: center;
+    text-align: center;
+    margin: 10px;
+    opacity: 0;
+
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.title1, .title2 {
+    color: rgba(223,5,5,1);
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rainbow {
+    0% {color: rgba(223,5,5,1);}
+
+    10% {color: rgba(249,151,31,1);}
+
+    25% {color: rgba(5,223,5,1);}
+
+    35% {color: rgba(31,249,245,1);}
+    
+    50% {color: rgba(31,122,249,1);}
+
+    75% {color: rgba(147,5,223,1);}
+
+    90% {color: rgba(250,80,188,1);}
 }
 
 .author {
     margin: 100px 0 50px 0;
+    z-index: 2;
 }
 
 /* Navigation */
@@ -81,6 +173,7 @@ header {
 .nav-item {
     padding: 10px;
     border: 1px solid whitesmoke;
+    z-index: 2;
 }
 
 .nav-item:hover {
@@ -102,10 +195,12 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 10%;
+    z-index: 2;
 }
 
 .section-title {
     margin-top: 10%;
+    text-align: center;
 }
 
 .section-des {
@@ -122,7 +217,6 @@ main {
     list-style: none;
     margin: 5% 0;
     grid-gap: 15px;
-    /* background: pink; */
 }
 
 .tips-item {
@@ -138,9 +232,16 @@ main {
 }
 
 /* Videos */
+.videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .videos-section {
     display: flex;
-    width: 100%;
+    width: auto;
+    height: auto;
     justify-content: center;
     margin: 10% 0;
     flex-wrap: wrap;
@@ -148,8 +249,65 @@ main {
 }
 
 .video {
-    width: 35vw;
-    height: auto;
+    width: auto;
+    height: 20vh;
+}
+
+/* Purchase Section */
+.purchase {
+    display: flex;
+    width: 100%;
+    margin: 10% 0;
+    align-content: center;
+    justify-content: space-evenly;
+    border: 2px solid white;
+    padding: 20px;
+    z-index: 2;
+}
+
+.purchase-image {
+    height: 30vh;
+    margin: 20px;
+    padding: 20px;
+}
+
+.purchase-info {
+    text-align: start;
+    align-self: center;
+}
+
+.buy-button {
+    border: 2px solid white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2vh 0;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background: rgba(241,242,242,0.3);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 100%;
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.footer-text {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin: 2vh 0;
 }
 
 @media only screen and (max-width:787px) {

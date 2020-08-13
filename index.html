@@ -11,25 +11,23 @@
 <!--beginning of wrapper-->    
 <div class="wrapper">
     <header>
+        <img src="./img/po20arcade-hero1.png" alt="po-20 arcade" id="hero1">
+        <img src="./img/po20arcade-hero2.png" alt="po-20 arcade" id="hero2">
         <div class="title">
             <h1 class="title1">PO-20</h1><br>
             <h1 class="title2">Arcade</h1>
+            <h3 class="author">by <a href="https://github.com/wowjustmike" class="link-text">wowjustmike</a></h3>
         </div>
-        <h3 class="author">by <a href="https://github.com/wowjustmike" class="link-text">wowjustmike</a></h3>
+        
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="/index.html" class="nav-link">
-                        <span class="link-text">Home</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="./tips.html" class="nav-link">
+                    <a href="#tips" class="nav-link">
                         <span class="link-text">Tips</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./videos.html" class="nav-link">
+                    <a href="#videos" class="nav-link">
                         <span class="link-text">Videos</span>
                     </a>
                 </li>
@@ -38,7 +36,7 @@
     </header>
 
     <main>
-        <section class="tips">
+        <section class="tips" id="tips">
             <div class="section-title">
                 <h1 class="title1">Tips</h1><br>
                 <h3 class="section-des">Bit-sized tricks to get the most out of the PO-20.</h3>
@@ -73,13 +71,14 @@
             </ul> 
         </section>
         
-        <section class="videos">
+        <section class="videos" id="videos">
             <div class="section-title">
-                <h1 class="title1">Videos</h1><br>
-                <h3 class="section-des">Learn how to use the PO-20 and listen to other people get the most out of it.</h3>
-            </div>
+                    <h1 class="title1">Tutorials</h1><br>
+                    <h3 class="section-des">Learn how to use the PO-20</h3>
+                </div>
 
             <div class="videos-section">
+                
                 <!-- TE Official Tutorial -->
                 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/W5PvXQq3DVQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
@@ -96,7 +95,12 @@
                 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/i8Js9T-3DxE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
+            <div class="section-title">
+                    <h1 class="title1">Examples</h1><br>
+                    <h3 class="section-des">Listen to what other musicians have been able to do with the PO-20</h3>
+                </div>
             <div class="videos-section">
+                
                 <!--Zombie Nation-->
                 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/9oE2FbuPEK0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             
@@ -110,6 +114,22 @@
                 <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/gjGwYCUkcts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
+
+        <section class="purchase">
+            <div class="product-image">
+                <img src="./img/po20arcade-cutout.png" alt="po-20 product image" class="purchase-image">
+            </div>
+            <div class="purchase-info">
+                <h3>PO-20</h3><br>
+                <h3>$59</h3>
+                <a href="https://teenage.engineering/store/po-20/" class="buy-button" target="_blank">Buy</a>
+            </div>
+        </section>
+
+        <footer>
+            <a href="https://teenage.engineering/products/po" class="buy-button" class="footer-button" target="_blank">More info about Pocket Operators</a>
+            <h3 class="footer-text">Time to make music!</h3>
+        </footer>
 
     </main>
 </div>    
